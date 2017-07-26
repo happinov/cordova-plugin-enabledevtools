@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+		id="cordova-plugin-enabledevtools"
+		version="1.0.0">
+	<name>Enable DevTools</name>
+	<description>Enables dev tools in app.</description>
+	<license>MIT</license>
+	<keywords>cordova,devtools</keywords>
+	<repo>https://github.com/happinov/cordova-plugin-enabledevtools.git</repo>
+
+	<author>Happinov</author>
+
+	<info>
+	</info>
+
+	<platform name="osx">
+		<config-file target="config.xml" parent="/*">
+			<feature name="EnableDevToolsPlugin">
+				<param name="ios-package" value="EnableDevToolsPlugin"/>
+				<param name="onload" value="true"/>
+			</feature>
+		</config-file>
+
+		<header-file src="src/osx/EnableDevToolsPlugin.h" />
+		<source-file src="src/osx/EnableDevToolsPlugin.m" />
+	</platform>
+</plugin>
